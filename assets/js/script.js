@@ -28,21 +28,21 @@ auditTask = function() {
     console.log(pancakeTime.at(i));
     console.log(time);
 // not sure why the for loop isn't working. I ran out of time. The if statement works.
-    for (var i = 0, i < 7; i++) {
-        if (pancakeTime.at(i) > time) {
-            $(pancakes.at(i)).addClass("past");
-            $(pancakes.at(i)).removeClass("present");
-            $(pancakes.at(i)).removeClass("future");
-        } else if (pancakeTime = time) {
-            $(pancakes.at(i)).removeClass("past");
-            $(pancakes.at(i)).addClass("present");
-            $(pancakes.at(i)).removeClass("future");
-        } else {
-            $(pancakes.at(i)).removeClass("past");
-            $(pancakes.at(i)).removeClass("present");
-            $(pancakes.at(i)).addClass("future");
-        };
-    };
+    // for (var i = 0, i < 7; i++) {
+    //     if (pancakeTime.at(i) > time) {
+    //         $(pancakes.at(i)).addClass("past");
+    //         $(pancakes.at(i)).removeClass("present");
+    //         $(pancakes.at(i)).removeClass("future");
+    //     } else if (pancakeTime = time) {
+    //         $(pancakes.at(i)).removeClass("past");
+    //         $(pancakes.at(i)).addClass("present");
+    //         $(pancakes.at(i)).removeClass("future");
+    //     } else {
+    //         $(pancakes.at(i)).removeClass("past");
+    //         $(pancakes.at(i)).removeClass("present");
+    //         $(pancakes.at(i)).addClass("future");
+    //     };
+    // };
 
  
 };
@@ -51,7 +51,7 @@ $("button").on("click", function() {
     var btnClicked = $(target);
     console.log(btnClicked.parent("<h2>"))
 
-    // console.log(this)
+   
 
 });
 
