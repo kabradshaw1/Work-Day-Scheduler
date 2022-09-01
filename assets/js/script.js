@@ -14,8 +14,9 @@ var currentDate = moment();
 currentDay.textContent = currentDate.format("dddd, MMM DD, YYYY");
 
 auditTask = function() {
+    // This is used in the loop to change the css. 
     var pancakes = [$("#9"), $("#10"), $("#11"), $("#12"), $("#13"), $("#14"), $("#15"), $("#16"), $("#17")];
-
+    // These are the ids of the hours that match the hour of the block, but in military time to have less conversions.  They are compared to time variable in the loop
     var pancakeTime = [$("#9").attr("id"), $("#10").attr("id"), $("#11").attr("id"), $("#12").attr("id"), $("#13").attr("id"), $("#14").attr("id"), $("#15").attr("id"), $("#16").attr("id"), $("#17").attr("id")] ;
 
     // var pancakes = $("#9");
@@ -26,7 +27,7 @@ auditTask = function() {
 
     console.log(pancakeTime.at(i));
     console.log(time);
-
+// not sure why the for loop isn't working. I ran out of time. The if statement works.
     for (var i = 0, i < 7; i++) {
         if (pancakeTime.at(i) > time) {
             $(pancakes.at(i)).addClass("past");
@@ -43,23 +44,9 @@ auditTask = function() {
         };
     };
 
-    // This if statement worked, so the problem is with my loop
-        // if (pancakeTime.at(i) > time) {
-        //     $(pancakes.at(i)).addClass("past");
-        //     $(pancakes.at(i)).removeClass("present");
-        //     $(pancakes.at(i)).removeClass("future");
-        // } else if (pancakeTime = time) {
-        //     $(pancakes.at(i)).removeClass("past");
-        //     $(pancakes.at(i)).addClass("present");
-        //     $(pancakes.at(i)).removeClass("future");
-        // } else {
-        //     $(pancakes.at(i)).removeClass("past");
-        //     $(pancakes.at(i)).removeClass("present");
-        //     $(pancakes.at(i)).addClass("future");
-        // };
-    
+ 
 };
-
+// ran out of time.  Need to set this up to move the stuff in the p tag to local storage storage Also still need to set up a function to load local storage.
 $("button").on("click", function() {
     var btnClicked = $(target);
     console.log(btnClicked.parent("<h2>"))
